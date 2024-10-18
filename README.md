@@ -1,10 +1,13 @@
 # Vector Library
 
-This is a simple example console application that demonstrates how to upload a `.txt` file into a vector database using [Pinecone](https://www.pinecone.io/).
+This is a simple example console application that demonstrates how to upload a `.txt` file into a [Pinecone](https://www.pinecone.io/) vector database. 
+
+Vector databases are a way to efficiently store and retrieving high-dimensional data, such as embeddings, typically used in AI systems. These embeddings typically represent text, images, or audio relevant to a specific application and enable these AI systems to conduct searches, make classification, and make recommendations.
 
 ## Overview
 
-- The user selects a `.txt` file from a list.
+- The application scans a directory for `.txt` files and provides a numbered list.
+- The user selects a `.txt` file from that list.
 - The application uses a basic Token Splitter to break the text into chunks.
 - The chunks are converted to embeddings using the OpenAI endpoint and the model `text-embedding-3-small`. A proprietary OpenAI model.
 - Each embedding is paired with metadata and a unique ID to create vectors.
